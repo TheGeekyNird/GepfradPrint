@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gepfrad Print</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<aside>
+  <div class="brand">GEPFRAD <span>PRINT</span></div>
+  <button id="discover">Scan for printers</button>
+  <div id="printers"></div>
+</aside>
+<main>
+  <header><h1>Print</h1><p>Direct printer control without the Windows printing subsystem.</p></header>
+
+  <section class="card">
+    <h2>Printer</h2>
+    <div id="printer-detail" class="muted">Select a printer.</div>
+    <div class="actions"><button id="diagnose" disabled>Test printer connection</button></div>
+    <div id="diagnostics"></div>
+  </section>
+
+  <section class="card">
+    <h2>Send a file</h2>
+    <input id="file" type="file">
+    <div class="grid">
+      <label>Copies<input id="copies" type="number" min="1" value="1"></label>
+      <label>Media<select id="media"><option value="na_letter_8.5x11in">Letter</option><option value="iso_a4_210x297mm">A4</option></select></label>
+      <label>Orientation<select id="orientation"><option value="3">Portrait</option><option value="4">Landscape</option></select></label>
+      <label>Color<select id="color"><option value="true">Color</option><option value="false">Grayscale</option></select></label>
+      <label>Duplex<select id="duplex"><option value="false">Off</option><option value="true">Long edge</option></select></label>
+    </div>
+    <button class="primary" id="print">Print</button>
+    <div id="message"></div>
+  </section>
+
+  <section class="card"><h2>Queue</h2><div id="queue"></div></section>
+</main>
+<script src="/app.js"></script>
+</body></html>
